@@ -1,0 +1,14 @@
+# robots.txt pour le portfolio de Jean-Claude Lugo
+# Autorise tous les moteurs de recherche à indexer le site complet
+
+User-agent: *
+Allow: /
+
+# Interdiction explicite des fichiers techniques
+Disallow: /audio/
+Disallow: /css/
+Disallow: /js/
+Disallow: /images/
+
+# Déclaration du sitemap
+Sitemap: https://jeanclaudelugo-portfolio.fr/sitemap.xml

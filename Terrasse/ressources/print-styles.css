@@ -1,0 +1,177 @@
+/* ================================================================
+   AJOUTE CE CODE À LA FIN DE styles.css
+   PDF PRINT STYLES v6.0
+   ================================================================ */
+
+@media print {
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+    
+    /* CACHER les effets */
+    #loadingScreen, .loading-container, .cyber-grid-3d,
+    .scan-lines, .scan-line-main, .aurora-container, .aurora,
+    .orb, .matrix-bg, .holo-grid, #particleContainer,
+    #nebulaCanvas, .photo-glow, .profile-ring, .navbar-glow,
+    .avatar-particles, .avatar-hologram, .avatar-outer-ring,
+    .avatar-inner-ring, .hero-bg-lines, .hero-corner,
+    .scroll-indicator, .scroll-top-ultra, #scrollTop,
+    .music-controls, .animations-control, .card-glow,
+    .card-border, .card-corners, .game-hologram,
+    .game-scan-line, .footer-glow, .btn-glitch, .btn-shine,
+    .btn-bg, .title-decoration, audio, video {
+        display: none !important;
+        visibility: hidden !important;
+    }
+    
+    /* VISIBILITÉ FORCÉE */
+    .fade-in, .main-content, .hero-content, section,
+    .container, .holo-card, .project-card, .skill-card,
+    .stat-card, .featured-game {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+    }
+    
+    /* Page */
+    html, body {
+        background: #0a0a0f !important;
+        color: #ffffff !important;
+        height: auto !important;
+        min-height: 0 !important;
+    }
+    
+    html[data-theme="light"], html[data-theme="light"] body {
+        background: #f8f9fa !important;
+        color: #1a1d23 !important;
+    }
+    
+    /* Navbar */
+    .navbar {
+        position: relative !important;
+        background: #1a1a2e !important;
+        border-bottom: 2px solid #00ffff !important;
+    }
+    
+    html[data-theme="light"] .navbar {
+        background: #ffffff !important;
+        border-bottom-color: #0077cc !important;
+    }
+    
+    .navbar-toggle, .navbar-menu, .controls-group { display: none !important; }
+    
+    /* Hero */
+    #hero {
+        min-height: auto !important;
+        height: auto !important;
+        padding: 15px 0 !important;
+    }
+    
+    .hero-title, .glitch-text {
+        background: none !important;
+        -webkit-text-fill-color: #00ffff !important;
+        text-shadow: none !important;
+    }
+    
+    html[data-theme="light"] .hero-title,
+    html[data-theme="light"] .glitch-text {
+        -webkit-text-fill-color: #0077cc !important;
+    }
+    
+    .btn-group { display: none !important; }
+    
+    /* Section titles */
+    .section-title {
+        background: none !important;
+        -webkit-text-fill-color: #00ffff !important;
+        border-bottom: 2px solid #00ffff !important;
+    }
+    
+    html[data-theme="light"] .section-title {
+        -webkit-text-fill-color: #0077cc !important;
+        border-bottom-color: #0077cc !important;
+    }
+    
+    /* Cards */
+    .holo-card, .project-card, .skill-card, .stat-card,
+    .featured-game, .contact-form, .map-container {
+        background: #1a1a2e !important;
+        border: 1px solid rgba(0,255,255,0.3) !important;
+        box-shadow: none !important;
+    }
+    
+    html[data-theme="light"] .holo-card,
+    html[data-theme="light"] .project-card,
+    html[data-theme="light"] .skill-card,
+    html[data-theme="light"] .stat-card,
+    html[data-theme="light"] .featured-game,
+    html[data-theme="light"] .contact-form,
+    html[data-theme="light"] .map-container {
+        background: #ffffff !important;
+        border-color: rgba(0,119,204,0.3) !important;
+    }
+    
+    /* Grilles */
+    .skills-grid {
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 6px !important;
+    }
+    
+    .projects-grid, .featured-games-container {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 8px !important;
+    }
+    
+    .stats-grid {
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 8px !important;
+    }
+    
+    /* Stats */
+    .stat-ring { display: none !important; }
+    
+    .stat-value {
+        background: none !important;
+        -webkit-text-fill-color: #00ffff !important;
+    }
+    
+    html[data-theme="light"] .stat-value {
+        -webkit-text-fill-color: #0077cc !important;
+    }
+    
+    /* Map */
+    .map-wrapper iframe { display: none !important; }
+    
+    .map-wrapper::after {
+        content: "📍 Draguignan, France" !important;
+    }
+    
+    /* Footer */
+    .footer {
+        background: #1a1a2e !important;
+        border-top: 2px solid #00ffff !important;
+    }
+    
+    html[data-theme="light"] .footer {
+        background: #ffffff !important;
+        border-top-color: #0077cc !important;
+    }
+    
+    .footer-logo {
+        background: none !important;
+        -webkit-text-fill-color: #00ffff !important;
+    }
+    
+    html[data-theme="light"] .footer-logo {
+        -webkit-text-fill-color: #0077cc !important;
+    }
+    
+    @page {
+        size: A4 portrait;
+        margin: 8mm;
+    }
+}

@@ -1,0 +1,2 @@
+ Option importante dans le dialogue d'impression
+Dans Chrome/Edge, il faut activer "Graphiques d'arrière-plan" :

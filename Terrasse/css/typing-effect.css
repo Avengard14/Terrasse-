@@ -1,0 +1,264 @@
+/* ====================================================================
+   STYLES POUR L'EFFET TYPING
+   Fichier : typing-effect.css
+   
+   Ce fichier contient tous les styles nécessaires pour l'effet typing
+   À inclure dans votre projet avec :
+   <link rel="stylesheet" href="typing-effect.css">
+==================================================================== */
+
+/* ====================================
+   STYLES DE BASE POUR LE TEXTE
+==================================== */
+
+/* Style du conteneur principal */
+.hero-description-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Style du texte de description */
+.hero-description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #e0e0e0;
+    margin: 0;
+    min-height: 80px; /* Évite les sauts de mise en page pendant l'animation */
+}
+
+/* ====================================
+   CURSEUR CLIGNOTANT
+==================================== */
+
+/* Style du curseur (barre verticale) */
+.typing-cursor {
+    display: inline-block;          /* Permet de contrôler les dimensions */
+    width: 2px;                     /* Largeur de la barre */
+    height: 1.2em;                  /* Hauteur proportionnelle au texte */
+    background-color: #00ff88;      /* Couleur verte néon (personnalisable) */
+    margin-left: 2px;               /* Petit espace après le dernier caractère */
+    animation: blink 0.7s infinite; /* Animation de clignotement */
+    vertical-align: text-bottom;    /* Alignement avec le texte */
+}
+
+/* Animation de clignotement du curseur */
+@keyframes blink {
+    0%, 49% {
+        opacity: 1;    /* Visible */
+    }
+    50%, 100% {
+        opacity: 0;    /* Invisible */
+    }
+}
+
+/* ====================================
+   ÉTAT PENDANT L'ANIMATION
+==================================== */
+
+/* Classe ajoutée pendant que le texte s'écrit */
+.hero-description.typing {
+    position: relative;
+}
+
+/* ====================================
+   VARIANTES DE COULEURS DE CURSEUR
+   (Décommentez celle que vous préférez)
+==================================== */
+
+/* Curseur vert néon (défaut) */
+.typing-cursor {
+    background-color: #00ff88;
+}
+
+/* Curseur bleu cyberpunk */
+/*
+.typing-cursor {
+    background-color: #00d9ff;
+}
+*/
+
+/* Curseur violet */
+/*
+.typing-cursor {
+    background-color: #b300ff;
+}
+*/
+
+/* Curseur blanc */
+/*
+.typing-cursor {
+    background-color: #ffffff;
+}
+*/
+
+/* Curseur rouge */
+/*
+.typing-cursor {
+    background-color: #ff0055;
+}
+*/
+
+/* Curseur doré */
+/*
+.typing-cursor {
+    background-color: #ffd700;
+}
+*/
+
+/* ====================================
+   VARIANTES DE VITESSE DE CLIGNOTEMENT
+==================================== */
+
+/* Clignotement rapide */
+/*
+.typing-cursor {
+    animation: blink 0.5s infinite;
+}
+*/
+
+/* Clignotement lent */
+/*
+.typing-cursor {
+    animation: blink 1s infinite;
+}
+*/
+
+/* Clignotement très lent */
+/*
+.typing-cursor {
+    animation: blink 1.5s infinite;
+}
+*/
+
+/* ====================================
+   VARIANTES DE STYLE DE CURSEUR
+==================================== */
+
+/* Curseur épais */
+/*
+.typing-cursor {
+    width: 4px;
+}
+*/
+
+/* Curseur block (comme un terminal) */
+/*
+.typing-cursor {
+    width: 0.6em;
+    background-color: rgba(0, 255, 136, 0.5);
+}
+*/
+
+/* Curseur souligné (underscore) */
+/*
+.typing-cursor {
+    width: 0.6em;
+    height: 2px;
+    margin-left: 0;
+    vertical-align: baseline;
+}
+*/
+
+/* ====================================
+   RESPONSIVE DESIGN
+==================================== */
+
+/* Tablettes et petits écrans */
+@media (max-width: 768px) {
+    .hero-description-container {
+        padding: 15px;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    .typing-cursor {
+        height: 1em;
+    }
+}
+
+/* Mobiles */
+@media (max-width: 480px) {
+    .hero-description-container {
+        padding: 10px;
+    }
+    
+    .hero-description {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+}
+
+/* ====================================
+   EFFETS OPTIONNELS
+==================================== */
+
+/* Effet de lueur autour du curseur (effet néon) */
+/*
+.typing-cursor {
+    box-shadow: 
+        0 0 5px currentColor,
+        0 0 10px currentColor,
+        0 0 15px currentColor;
+}
+*/
+
+/* Transition douce lors de l'apparition du texte */
+/*
+.hero-description {
+    transition: opacity 0.3s ease-in-out;
+}
+*/
+
+/* Animation subtile du conteneur pendant l'écriture */
+/*
+.hero-description.typing {
+    animation: subtle-pulse 2s ease-in-out infinite;
+}
+
+@keyframes subtle-pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.01);
+    }
+}
+*/
+
+/* ====================================
+   THÈME SOMBRE (OPTIONNEL)
+==================================== */
+
+/* Styles spécifiques pour le mode sombre */
+/*
+@media (prefers-color-scheme: dark) {
+    .hero-description {
+        color: #f0f0f0;
+    }
+    
+    .typing-cursor {
+        background-color: #00ff88;
+    }
+}
+*/
+
+/* ====================================
+   THÈME CLAIR (OPTIONNEL)
+==================================== */
+
+/* Styles spécifiques pour le mode clair */
+/*
+@media (prefers-color-scheme: light) {
+    .hero-description {
+        color: #333333;
+    }
+    
+    .typing-cursor {
+        background-color: #0066cc;
+    }
+}
+*/

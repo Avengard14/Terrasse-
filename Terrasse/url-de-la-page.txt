@@ -1,0 +1,5 @@
+Dossier à télécharger :
+https://github.com/pythonman83/game-designer
+
+En ligne :
+https://pythonman83.github.io/game-designer/
